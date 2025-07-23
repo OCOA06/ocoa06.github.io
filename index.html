@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/chessboard-1.0.0.min.css">
+    <link rel="icon" href="logowbahorasi.ico">
+    <title>Slaydrez</title>
+</head>
+
+<body>
+    <div class="volume-bar volume-bar-left">
+        <label for="bg-volume" class="volume-label">Fondo</label>
+        <input type="range" id="bg-volume" min="0" max="1" step="0.01" value="1" orient="vertical">
+    </div>
+    <div class="container">
+        <img src="head.png" alt="SLAYDREZ ROVIC" style="max-width: 100%; height: auto; margin-right: -5px;" />
+        <div class="board" id="board"></div>
+        <div class="buttons">
+            <button class="play-again">Juego Nuevo</button>
+            <button class="flip-board">Invertir</button>
+        </div>
+        <audio id="background-music" loop autoplay>
+            <source src="audio/background-music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="volume-bar volume-bar-right">
+        <label for="sfx-volume" class="volume-label">Efectos</label>
+        <input type="range" id="sfx-volume" min="0" max="1" step="0.01" value="1" orient="vertical">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/chessboard-1.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

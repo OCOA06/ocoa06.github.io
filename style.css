@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffc1cc;
+    cursor: url('./img/hand-cursor.png'), pointer;
+
+    
+    background-image: url(Fondo.gif);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.container{
+    background-color: #a94064;
+    padding: 3rem;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(243, 65, 115, 0.2);
+}
+
+h1{
+    text-align: center;
+    font-weight: 500;
+}
+
+.board {
+    width: 400px;
+    margin: 20px auto;
+    cursor: url('./img/hand-cursor.png'), pointer;
+    position: relative;
+}
+
+.board::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background-image: url('marco.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.board > * {
+    position: relative;
+    z-index: 0;
+}
+.buttons{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+button{
+    color: #ffff;
+    background-color: #ec77ac;
+    border: 3px solid #ffffff;
+    width: 120px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color: #f666ae;
+    cursor: url('./img/hand-cursor.png'), pointer;
+}
+
+audio {
+    display: none;
+}
+
+.square-55d63 {
+    box-shadow: inset 0 0 10px rgba(255, 22, 181, 0.3);
+}
+
+
+.volume-bar {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(169, 64, 100);
+    padding: 16px 8px;
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(255, 231, 238, 0.2);
+}
+.volume-bar-left {
+    left: 24px;
+}
+.volume-bar-right {
+    right: 24px;
+}
+.volume-label {
+    color: #fff;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    writing-mode: vertical-rl;
+    text-align: center;
+    transform: rotate(270deg);
+}
+.volume-bar input[type="range"] {
+    width: 80px;
+    height: 220px;
+    writing-mode: bt-lr;
+    -webkit-appearance: slider-vertical;
+    appearance: slider-vertical;
+    margin: 0;
+}
+@media (max-width: 700px) {
+    .volume-bar {
+        display: none;
+    }
+}
+
+
+
+
+
+
